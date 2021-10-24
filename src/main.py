@@ -49,6 +49,7 @@ def atcoder(s):
     
 
 token = os.getenv("token")
+print(token)
 updater = Updater(token, use_context=True)
 admin = os.getenv("admin")
 

@@ -108,6 +108,11 @@ def inlinequery(update : Update, context : CallbackContext):
 
 dp = updater.dispatcher
 
+dp.bot.send_message(
+        chat_id = admin,
+        text = "روشن شدم"
+    )
+
 dp.add_handler(CommandHandler("start", start))
 dp.add_handler(MessageHandler(Filters.all & ~Filters.command & ~Filters.update.edited_message, handle))
 dp.add_handler(InlineQueryHandler(inlinequery))

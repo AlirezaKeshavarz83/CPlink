@@ -114,7 +114,7 @@ dp.bot.send_message(
     )
 
 dp.add_handler(CommandHandler("start", start))
-dp.add_handler(MessageHandler(Filters.all & ~Filters.command & ~Filters.update.edited_message, handle))
+dp.add_handler(MessageHandler(Filters.text & ~Filters.command & ~Filters.update.edited_message, handle))
 dp.add_handler(InlineQueryHandler(inlinequery))
 
 updater.start_polling()
